@@ -1,0 +1,129 @@
+.site-header {
+  background: #140e0a;
+  color: #f5f3ed;
+  font-family: monospace;
+}
+
+.site-header__container {
+  width: min(1200px, calc(100% - 48px));
+  min-height: 60px;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-bottom: 1px solid #49301e;
+}
+
+.site-header__logo {
+  flex-shrink: 0;
+  color: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 1.4px;
+  text-decoration: none;
+}
+
+.site-header__nav {
+  display: flex;
+  align-self: stretch;
+  gap: 40px;
+}
+
+.site-header__link {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid transparent;
+  color: inherit;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.site-header__link:hover,
+.site-header__link.is-active {
+  color: #d28c46;
+}
+
+.site-header__link.is-active {
+  border-bottom-color: #d28c46;
+  font-weight: 700;
+}
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.site-header__icon-button {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.site-header__badge {
+  position: absolute;
+  top: -3px;
+  right: -5px;
+  display: grid;
+  place-items: center;
+  min-width: 17px;
+  height: 17px;
+  padding-inline: 3px;
+  border-radius: 50%;
+  background: #d28c46;
+  color: #140e0a;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.site-header__login {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 5px;
+  background: #d28c46;
+  color: #140e0a;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.site-header a:focus-visible,
+.site-header button:focus-visible {
+  outline: 2px solid #d28c46;
+  outline-offset: 4px;
+}
+
+@media (max-width: 760px) {
+  .site-header__container {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-top: 16px;
+  }
+
+  .site-header__nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .site-header__link {
+    padding-block: 12px;
+    font-size: 14px;
+  }
+
+  .site-header__actions {
+    gap: 16px;
+  }
+}
